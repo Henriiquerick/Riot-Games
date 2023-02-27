@@ -194,6 +194,9 @@ main {
     margin-bottom: 5px;
     font-weight: 700;
 }
+.login__link:hover{
+    color: black;
+}
 
 .wallpaper {
     width: 100%;

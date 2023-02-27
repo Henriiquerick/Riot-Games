@@ -24,7 +24,17 @@ const handleChange = () => {
     }
 }
 
+const handleChangeCreateAccount = () => {
+    const [username, password, email] = inputs;
+
+    if (username.value && password.value.length >= 8 && email.value) {
+        button.removeAttribute('disabled');
+    } else {
+        button.setAttribute('disabled', '');
+    }
+}
+
 inputs.forEach((input) => input.addEventListener('focus', handleFocus));
 inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
 inputs.forEach((input) => input.addEventListener('input', handleChange));
-
+inputs.forEach((input) => input.addEventListener('input', handleChangeCreateAccount));
